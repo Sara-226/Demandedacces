@@ -4,12 +4,15 @@
     height: 570px;
 }
 .peidp{
-    border: 2px solid rgb(143, 118, 118);
+    display: flex;
+    
     height: 100px;
 }
 .logo{
+    margin-top: 5px;
+    margin-left: 15px;
     background-size: cover;
-    height: 45px;
-    width: 25%;
+    height: 50px;
+    width: 20%;
     border: 1px solid #E90505;
 }

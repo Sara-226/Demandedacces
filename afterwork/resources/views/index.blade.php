@@ -16,12 +16,16 @@
     </div>
     <div class="peidp" style="background-image:linear-gradient(180deg,#E90505, #680000)">
         <div>
-            <div class="logo" style="background-image:url({{asset('font/LOGO.png')}}); background-repeat: no-repeat border-radius:150px">
-
+            <div class="logo" style="background-image:url({{asset('font/Groupe.png')}}); background-repeat:no-repeat ; border-radius: 100px 100px 100px 100px;">
             </div>
         </div>
-        <div>
-
+        <div class="bouton">
+            <div>
+                <h4>Se connecter</4>
+            </div>
+            <div>
+                <h4>Crée un compte</h4>
+            </div>
         </div>
     </div>
 </body>
