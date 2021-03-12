@@ -12,10 +12,10 @@
 
 <body>
     <div class="fond" style="background-image:url({{asset('font/aftewrk.png')}}); background-repeat: no-repeat">
-
     </div>
     <div class="peidp" style="background-image:linear-gradient(180deg,#E90505, #680000)">
         <div>
+<<<<<<< HEAD
             <div class="logo" style="background-image:url({{asset('font/Groupe.png')}}); background-repeat:no-repeat ; border-radius: 100px 100px 100px 100px;">
             </div>
         </div>
@@ -25,6 +25,21 @@
             </div>
             <div>
                 <h4>Crée un compte</h4>
+=======
+            <div class="logo" style="background-image:url({{asset('font/simplon.png')}}); background-repeat: no-repeat;">
+            </div>
+        </div>
+        <div class="espace">
+            <div class="conect">
+                <a href=" ">
+                    <h3>Se connecter</h3>
+                </a>
+            </div>
+            <div class="conect">
+                <a href=" ">
+                    <h3>S'inscrire</h3>
+                </a>
+>>>>>>> master
             </div>
         </div>
     </div>

@@ -14,7 +14,8 @@ class CreateDeterminerPlacesTable extends Migration
     public function up()
     {
         Schema::create('determiner_places', function (Blueprint $table) {
-            $table->integer('place', 100);
+            $table->id();
+            $table->integer('place');
             $table->date('jour');
             $table->date('heure');
             $table->timestamps();
