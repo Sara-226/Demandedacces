@@ -5,7 +5,6 @@
 }
 .peidp{
     display: flex;
-<<<<<<< HEAD
     
     height: 100px;
 }
@@ -17,36 +16,3 @@
     width: 20%;
     border: 1px solid #E90505;
 }
-=======
-    justify-content: space-around;
-    height: 100px;
-}
-.logo{
-    
-    background-size: cover;
-    border-radius: 20px;
-    height: 45px;
-    width: 250px;
-    border: 1px solid #a74747;
-}
-.espace{
-    display: flex;
-    justify-content: space-around;
-    height: 100px;
-    width: 50%;  
-}
-.conect{
-
-    background-color: white;
-    border-radius: 20px;
-    height: 45px;
-    width: 200px;
-    border: 1px solid #a74747;
-}
-.conect a h3 {
-    text-align: center;
-    color: black;
-    font-size: 25px;
-}
-
->>>>>>> master
