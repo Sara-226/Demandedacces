@@ -1,12 +1,29 @@
 /*inscription ceci est le css de la page inscription*/
 .header{
-    background-color: #a74747;
-    height: 20vh;
+
+    height: 15vh;
+}
+.logo{
+    margin-top: 5px;
+    background-size: cover;
+    height: 50px;
+    width: 250px;
+    border: 1px solid #E90505;
+}
+.row{
+    justify-content: center;
+}
+.contenaire{
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+}
+.submi{
+    margin: 40%;
 }
 .rectangle{
-    border:#a74747 2px solid;
-    width: 100px;
-    height: 90vh;
+    background-color: rgba(95, 194, 95, 0.342);
+    width: 50%;
     border-radius: 20px;
 }
 .rectangle form input{
@@ -16,7 +33,6 @@
     color:white;
 }
 .footer{
-    background-color: #a74747;
     height: 20vh;
 }
 .copyright{
@@ -31,7 +47,7 @@
 .carre{
     border:#a74747 2px solid;
     width: 100px;
-    height: 60vh;
     background-color: #a74747;
     border-radius: 25px;
 }
+

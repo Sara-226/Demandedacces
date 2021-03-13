@@ -20,6 +20,6 @@ Route::get('/inscription', function () {
     return view('inscription');
 });
 
-//Route::get('connexion', function () {
-return view('connexion');
-//});
+Route::get('connexion', function () {
+    return view('connexion');
+});

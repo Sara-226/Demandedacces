@@ -15,22 +15,23 @@
     </div>
     <div class="peidp" style="background-image:linear-gradient(180deg,#E90505, #680000)">
         <div>
-            <div class="logo" style="background-image:url({{asset('font/simplon.png')}}); background-repeat: no-repeat;">
+            <div class="logo" style="background-image:url({{asset('font/simplon.png')}}); background-repeat:no-repeat ; border-radius: 100px 100px 100px 100px;">
             </div>
         </div>
-        <div class="espace">
-            <div class="conect">
-                <a href=" ">
-                    <h3>Se connecter</h3>
-                </a>
-            </div>
-            <div class="conect">
-                <a href=" ">
-                    <h3>S'inscrire</h3>
-                </a>
+        <div class="bouton">
+            <div class="espace">
+                <div class="conect">
+                    <a href="{{url('connexion')}} ">
+                        <h3>Se connecter</h3>
+                    </a>
+                </div>
+                <div class="conect">
+                    <a href="{{url('inscription')}} ">
+                        <h3>S'inscrire</h3>
+                    </a>
+                </div>
             </div>
         </div>
-    </div>
 </body>
 
 </html>
