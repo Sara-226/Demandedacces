@@ -15,34 +15,23 @@
     </div>
     <div class="peidp" style="background-image:linear-gradient(180deg,#E90505, #680000)">
         <div>
-<<<<<<< HEAD
-            <div class="logo" style="background-image:url({{asset('font/Groupe.png')}}); background-repeat:no-repeat ; border-radius: 100px 100px 100px 100px;">
+            <div class="logo" style="background-image:url({{asset('font/simplon.png')}}); background-repeat:no-repeat ; border-radius: 100px 100px 100px 100px;">
             </div>
         </div>
         <div class="bouton">
-            <div>
-                <h4>Se connecter</4>
-            </div>
-            <div>
-                <h4>Crée un compte</h4>
-=======
-            <div class="logo" style="background-image:url({{asset('font/simplon.png')}}); background-repeat: no-repeat;">
-            </div>
-        </div>
-        <div class="espace">
-            <div class="conect">
-                <a href=" ">
-                    <h3>Se connecter</h3>
-                </a>
-            </div>
-            <div class="conect">
-                <a href=" ">
-                    <h3>S'inscrire</h3>
-                </a>
->>>>>>> master
+            <div class="espace">
+                <div class="conect">
+                    <a href="{{url('connexion')}} ">
+                        <h3>Se connecter</h3>
+                    </a>
+                </div>
+                <div class="conect">
+                    <a href="{{url('inscription')}} ">
+                        <h3>S'inscrire</h3>
+                    </a>
+                </div>
             </div>
         </div>
-    </div>
 </body>
 
 </html>
