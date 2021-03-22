@@ -33,11 +33,16 @@
             </div>
             <div class="col-lg-5 col-md-6 col-sm-12 carre" style="background-image:linear-gradient(180deg,#E90505, #680000)">
                 <h1 class="text-center mt-1 afterwork">AFTER-WORK</h1>
-                <form action="" method="post">
+                <form action="{{ url('connexion') }}" method="POST">
+                    @csrf
                     <div class="form-group">
-                        <input type="text" placeholder="email" class="form-control mt-5">
-                        <input type="text" placeholder="role" class="form-control mt-5">
-                        <input type="text" placeholder="password" class="form-control mt-5">
+                        <input type="text" placeholder="email" name="email" value="{{old('email')}}" class="form-control mt-5">
+                        <select name="role" id="" class="form-control mt-5">
+                            <option value="apprenante">apprenant(es)</option>
+                            <option value="admin">administrateur</option>
+                        </select>
+                        <!-- <input type="text" placeholder="role" name="role" class="form-control mt-5"> -->
+                        <input type="password" placeholder="password" name="password" class="form-control mt-5">
                         <p class="text-center"><input type="submit" placeholder="se connecter" class="rounded btn-light mt-2 "></p>
                     </div>
                 </form>

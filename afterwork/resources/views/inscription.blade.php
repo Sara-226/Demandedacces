@@ -31,12 +31,17 @@
             </div>
             <div class="rectangle col-5" style="background-image:linear-gradient(180deg,#E90505, #680000)">
                 <h1 class="text-center mt-1 afterwork">AFTER-WORK</h1>
-                <form action="" method="post" class="form-group">
-                    <input type="text" placeholder="Nom" class=" mt-5 d-block container-fluid">
-                    <input type="text" placeholder="Prenom" class=" mt-5 d-block container-fluid">
-                    <input type="text" placeholder="email" class=" mt-5 d-block container-fluid">
-                    <input type="text" placeholder="role" class=" mt-5 d-block container-fluid">
-                    <input type="text" placeholder="password" class=" mt-5 d-block container-fluid">
+                <form action="{{ url('register') }}" method="POST" class="form-group">
+                    @csrf
+                    <input type="text" placeholder="Nom" name="nom" class=" mt-5 d-block container-fluid">
+                    <input type="text" placeholder="Prenom" name="prenom" class=" mt-5 d-block container-fluid">
+                    <input type="text" placeholder="email" name="mail" class=" mt-5 d-block container-fluid">
+                    <select name="role" id="" class="mt-5 d-block container-fluid">
+                        <option value="apprenante">apprenant(es)</option>
+                        <option value="admin">administrateur</option>
+                    </select>
+                    <!-- <input type="text" placeholder="role" name="role" class=" mt-5 d-block container-fluid"> -->
+                    <input type="password" placeholder="password" name="password" class=" mt-5 d-block container-fluid">
                     <input type="submit" placeholder="soumettre" class="rounded btn-light mt-5 submi">
                 </form>
             </div>

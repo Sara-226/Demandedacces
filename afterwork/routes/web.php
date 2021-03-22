@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\inscriptioncontroleur;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -23,3 +24,17 @@ Route::get('/inscription', function () {
 Route::get('connexion', function () {
     return view('connexion');
 });
+Route::get('reserver', function () {
+    return view('reserver');
+});
+Route::get('annonce', function () {
+    return view('annonce');
+});
+Route::get('adminpage', function () {
+    return view('adminpage');
+});
+//Routes faisant appel aux fonction des controllers
+Route::post('register', [inscriptioncontroleur::class, 'register']);
+//Route::get('login', [inscriptioncontroleur::class, 'login']);
+//Route::post('create', [inscriptioncontroleur::class, 'create'])->name('create');
+Route::post('connexion', [inscriptioncontroleur::class, 'connexion'])->name('connexion');

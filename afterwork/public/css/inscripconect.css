@@ -22,7 +22,6 @@
     margin: 40%;
 }
 .rectangle{
-    background-color: rgba(95, 194, 95, 0.342);
     width: 50%;
     border-radius: 20px;
 }
@@ -49,5 +48,15 @@
     width: 100px;
     background-color: #a74747;
     border-radius: 25px;
+}
+.incre{
+    border: 1px solid white;
+    background-color: white;
+    border-radius: 25px;
+    width: 50%;
+}
+.suivi{
+    display: flex;
+    flex-direction: row;
 }
 

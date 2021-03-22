@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateDeterminerPlacesTable extends Migration
+class CreateJoursTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,11 +13,9 @@ class CreateDeterminerPlacesTable extends Migration
      */
     public function up()
     {
-        Schema::create('determiner_places', function (Blueprint $table) {
-            $table->id();
-            $table->integer('place');
-            $table->date('jours');
-            $table->date('heure');
+        Schema::create('jours', function (Blueprint $table) {
+            $table->id('id');
+            $table->string('libellejours');
             $table->timestamps();
         });
     }
@@ -29,6 +27,6 @@ class CreateDeterminerPlacesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('determiner_places');
+        Schema::dropIfExists('jours');
     }
 }
