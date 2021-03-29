@@ -39,12 +39,12 @@ class inscriptioncontroleur extends Controller
         ]);
         if ($test) {
             if ($user = 'admin') {
-                return view('adminpage');
+                return view('inscription');
             } else {
                 return 'reserver';
             }
         } else {
-            return view('index');
+            return redirect('connexion');
         }
         //return 'Authentifié';
 
