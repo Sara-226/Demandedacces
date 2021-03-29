@@ -24,24 +24,37 @@
             </div>
         </div>
     </header>
-    <div class="contenaire">
-        <div class="row col-10">
-            <div class="centrer col-5">
+    <div class="contenaire container">
+        <div class="row">
+            <div class="centrer col-lg-5 col-md-6 col-sm-12">
                 <img src="font/logo.png" alt="" style="width: 100%; margin-top:150px;">
             </div>
-            <div class="rectangle col-5" style="background-image:linear-gradient(180deg,#E90505, #680000)">
+            <div class="rectangle col-lg-5 col-md-6 col-sm-12" style="background-image:linear-gradient(180deg,#E90505, #680000)">
+                <div class="results container-fluid">
+                    @if (Session::get('success'))
+                        <p class="alert alert-success">
+                            {{ Session::get('success') }}
+                        </p>
+                    @endif
+                    @if (Session::get('fail'))
+                    <div class="alert alert-danger">
+                        {{ Session::get('fail') }}
+                    </div>
+                @endif
+                </div>
                 <h1 class="text-center mt-1 afterwork">AFTER-WORK</h1>
-                <form action="{{ url('register') }}" method="POST" class="form-group">
-                    @csrf
-                    <input type="text" placeholder="Nom" name="nom" class=" mt-5 d-block container-fluid">
-                    <input type="text" placeholder="Prenom" name="prenom" class=" mt-5 d-block container-fluid">
-                    <input type="text" placeholder="email" name="mail" class=" mt-5 d-block container-fluid">
-                    <select name="role" id="" class="mt-5 d-block container-fluid">
-                        <option value="apprenante">apprenant(es)</option>
-                        <option value="admin">administrateur</option>
-                    </select>
-                    <!-- <input type="text" placeholder="role" name="role" class=" mt-5 d-block container-fluid"> -->
-                    <input type="password" placeholder="password" name="password" class=" mt-5 d-block container-fluid">
+                <form action="{{ route('create') }}" method="POST" class="form-group">
+                @csrf
+                    <input type="text" name="nom" placeholder="Nom" class=" mt-5 d-block container-fluid">
+                    <p class="text-center text-light">@error('nom') {{ $message }} @enderror</p>
+                    <input type="text" name="prenom" placeholder="Prenom" class=" mt-5 d-block container-fluid">
+                    <p class="text-center text-light">@error('prenom') {{ $message }} @enderror</p>
+                    <input type="email" name="mail" placeholder="email" class=" mt-5 d-block container-fluid">
+                    <p class="text-center text-light">@error('mail') {{ $message }} @enderror</p>
+                    <input type="text" name="role" placeholder="role" class=" mt-5 d-block container-fluid">
+                    <p class="text-center text-light">@error('role') {{ $message }} @enderror</p>
+                    <input type="password" name="password" placeholder="password" class=" mt-5 d-block container-fluid">
+                    <p class="text-center text-light">@error('password') {{ $message }} @enderror</p>
                     <input type="submit" placeholder="soumettre" class="rounded btn-light mt-5 submi">
                 </form>
             </div>

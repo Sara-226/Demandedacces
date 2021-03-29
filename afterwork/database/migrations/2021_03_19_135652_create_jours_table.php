@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateUtilsTable extends Migration
+class CreateJoursTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,14 +13,9 @@ class CreateUtilsTable extends Migration
      */
     public function up()
     {
-        Schema::create('utils', function (Blueprint $table) {
+        Schema::create('jours', function (Blueprint $table) {
             $table->id();
-            $table->string('nom', 50);
-            $table->string('prenom', 50);
-            $table->string('mail', 50);
-            $table->string('statut')->default('passif');
-            $table->string('password');
-            $table->string('role', 50);
+            $table->string('libellejours');
             $table->timestamps();
         });
     }
@@ -32,6 +27,6 @@ class CreateUtilsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('utils');
+        Schema::dropIfExists('jours');
     }
 }

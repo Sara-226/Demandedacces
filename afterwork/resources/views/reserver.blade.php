@@ -33,27 +33,24 @@
             </div>
             <div class="col-lg-5 col-md-6 col-sm-12 carre" style="background-image:linear-gradient(180deg,#E90505, #680000)">
                 <h1 class="text-center mt-1 afterwork">AFTER-WORK</h1>
-                <form action="{{ url('') }}" method="POST">
+                <form action="{{ route('reservation') }}" method="POST">
                     @csrf
                     <div class="form-group">
-                        <input type="text" placeholder="email" name="email" value="{{old('email')}}" class="form-control mt-5">
+                        <input type="text" placeholder="email" name="mail" value="{{old('mail')}}" class="form-control mt-5">
                         <select name="jour" multiple="yes" id="" size="4" class=" form-control mt-5">
-                            <option value="lundi">lundi</option>
-                            <option value="mardi">mardi</option>
-                            <option value="mercredi">mercredi</option>
-                            <option value="jeudi">jeudi</option>
-                            <option value="vendredi">vendredi</option>
-                            <option value="samedi">samedi</option>
-                            <option value="dimanche">dimanche</option>
+                            @foreach($jours as $j)
+                            <option value="{{ $j->libellejours }}">
+                                {{ $j->libellejours }}
+                             </option >
+                             @endforeach
                         </select>
                         <select name="heure" multiple id="" size="2" class="form-control mt-5">
-                            <option value="17h/19h">17h/19h du lundi au vendredi</option>
-                            <option value="19h/21h">19h/21h du lundi au vendri</option>
-                            <option value="09h/12h">09h/12h samedi et dimanche</option>
-                            <option value="12h/17h">12h/17h samedi et dimanche</option>
+                           @foreach($determiner_place as $det)
+                            <option value="{{ $det->heure }}" >
+                                {{ $det->heure }}
+                            </option>
+                            @endforeach
                         </select>
-                        <!-- <input type="text" placeholder="role" name="role" class="form-control mt-5"> -->
-                        <input type="password" placeholder="password" name="password" class="form-control mt-5">
                         <p class="text-center"><input type="submit" placeholder="se connecter" class="rounded btn-light mt-2 "></p>
                     </div>
                 </form>

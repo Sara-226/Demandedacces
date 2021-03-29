@@ -32,17 +32,30 @@
                 </div>
             </div>
             <div class="col-lg-5 col-md-6 col-sm-12 carre" style="background-image:linear-gradient(180deg,#E90505, #680000)">
+                <div class="results container-fluid">
+                    @if (Session::get('success'))
+                        <p class="alert alert-success">
+                            {{ Session::get('success') }}
+                        </p>
+                    @endif
+                    @if (Session::get('fail'))
+                    <div class="alert alert-danger">
+                        {{ Session::get('fail') }}
+                    </div>
+                @endif
                 <h1 class="text-center mt-1 afterwork">AFTER-WORK</h1>
-                <form action="{{ url('connexion') }}" method="POST">
+                <form action="{{ Route('connexion') }}" method="POST">
                     @csrf
                     <div class="form-group">
-                        <input type="text" placeholder="email" name="email" value="{{old('email')}}" class="form-control mt-5">
+                        <input type="text" placeholder="email" name="mail" class="form-control mt-5">
+                        <p class="text-center text-light">@error('mail') {{ $message }} @enderror</p>
                         <select name="role" id="" class="form-control mt-5">
                             <option value="apprenante">apprenant(es)</option>
                             <option value="admin">administrateur</option>
                         </select>
-                        <!-- <input type="text" placeholder="role" name="role" class="form-control mt-5"> -->
+                        <p class="text-center text-light">@error('role') {{ $message }} @enderror</p>
                         <input type="password" placeholder="password" name="password" class="form-control mt-5">
+                        <p class="text-center text-light">@error('password') {{ $message }} @enderror</p>
                         <p class="text-center"><input type="submit" placeholder="se connecter" class="rounded btn-light mt-2 "></p>
                     </div>
                 </form>
